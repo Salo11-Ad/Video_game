@@ -9,7 +9,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text ScoreText;
     public TMP_Text WarningText;
 
+    public GameObject GameOverPanel;
+
     private int score = 0;
+    private int totalCollectibles;
+    private int collected = 0;
 
     void Awake()
     {
@@ -21,39 +25,47 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        totalCollectibles = FindObjectsOfType<Collectible>().Length;
         UpdateScoreText();
+        Time.timeScale = 1f;
     }
 
     public void AddScore(int amount)
     {
         score += amount;
+        collected++;
         UpdateScoreText();
     }
 
     void UpdateScoreText()
     {
-        ScoreText.text = "Score: " + score;
+        if (ScoreText != null)
+            ScoreText.text = "Score: " + score;
     }
 
     public void GameOver()
     {
-        WarningText.text = "GAME OVER";
-        WarningText.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+
+        if (GameOverPanel != null)
+            GameOverPanel.SetActive(true);
+
+        Debug.Log("GAME OVER");
     }
 
     public void TryWin()
     {
-        int totalCollectibles = FindObjectsOfType<Collectible>().Length;
+        int left = totalCollectibles - collected;
 
-        if (totalCollectibles == 0)
+        if (left == 0)
         {
-            WarningText.gameObject.SetActive(true);
             WarningText.text = "¡GANASTE!";
+            WarningText.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
         else
         {
-            StartCoroutine(MostrarWarning("Todavía faltan objetos por recolectar.", 2f));
+            StartCoroutine(MostrarWarning("Faltan objetos por recolectar (" + left + ")", 2f));
         }
     }
 
@@ -63,17 +75,6 @@ public class GameManager : MonoBehaviour
         WarningText.text = mensaje;
         yield return new WaitForSeconds(duracion);
         WarningText.gameObject.SetActive(false);
-    }
-
-    public void ShowWarning()
-    {
-        if (WarningText != null)
-            WarningText.gameObject.SetActive(true);
-    }
-
-    public void WinGame()
-    {
-        Debug.Log("Ganaste el juego");
     }
 }
 

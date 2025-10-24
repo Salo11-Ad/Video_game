@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -7,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("Enemy") || other.CompareTag("BlackHole"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.Instance.GameOver();
         }
     }
 }
