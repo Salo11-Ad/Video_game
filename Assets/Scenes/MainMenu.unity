@@ -337,7 +337,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1940947893}
   - {fileID: 1299380146}
   - {fileID: 1103378748}
   m_Father: {fileID: 0}
@@ -380,7 +379,7 @@ MonoBehaviour:
   PausePanel: {fileID: 1299380145}
   SettingsPanel: {fileID: 1743694589}
   InstructionsPanel: {fileID: 0}
-  GameOverPanel: {fileID: 1940947890}
+  GameOverPanel: {fileID: 0}
   isPaused: 0
 --- !u!4 &153876467
 Transform:
@@ -2881,7 +2880,7 @@ RectTransform:
   m_GameObject: {fileID: 1353777471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.37133157, y: 0.37133157, z: 0.37133157}
+  m_LocalScale: {x: 0.30568758, y: 0.30568758, z: 0.30568758}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 808339345}
@@ -2893,7 +2892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0040893555, y: 5}
+  m_AnchoredPosition: {x: -1.0924072, y: 8}
   m_SizeDelta: {x: 2012, y: 1635.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353777473
@@ -3606,7 +3605,7 @@ RectTransform:
   m_GameObject: {fileID: 1743694589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.36487332, y: 0.36487332, z: 0.36487332}
+  m_LocalScale: {x: 0.23971686, y: 0.23971686, z: 0.23971686}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1803874135}
@@ -3624,7 +3623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.7280273, y: 25.574005}
+  m_AnchoredPosition: {x: -4.7280273, y: 2}
   m_SizeDelta: {x: 2212.443, y: 1719.536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743694591
@@ -4575,81 +4574,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914495440}
   m_CullTransparentMesh: 1
---- !u!1 &1940947890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1940947893}
-  - component: {fileID: 1940947892}
-  - component: {fileID: 1940947891}
-  m_Layer: 5
-  m_Name: PanelGameOver
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1940947891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940947890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1940947892
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940947890}
-  m_CullTransparentMesh: 1
---- !u!224 &1940947893
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940947890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 108147725}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2040563194
 GameObject:
   m_ObjectHideFlags: 0

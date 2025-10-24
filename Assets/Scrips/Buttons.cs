@@ -84,7 +84,13 @@ public class Buttons : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+    
+    public void OpenSettingsInMainMenu()
+    {
+        PlayerPrefs.SetInt("AbrirSettings", 1);
 
+        SceneManager.LoadScene("MainMenu");
+    }
     void Start()
     {
         
