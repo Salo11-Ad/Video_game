@@ -79,6 +79,12 @@ public class Buttons : MonoBehaviour
         GameOverPanel.SetActive(true);
     }
 
+    public void GoHomeScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void Start()
     {
         
